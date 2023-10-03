@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Úkol</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-grey bg-grey" style="background-color: rgb(147, 144, 144)">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" style="color:rgb(69, 68, 68)">Čára</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h2>Nakreslit čáru</h2>
+    <form>
+        <label for="length">Zadej délku čáru</label>
+        <input type="number" id="length" placeholder="Délka čáry">
+        <button type="button" onclick="drawLine()">Nakreslit</button>
+    </form>
+    <div id="line"></div>
+
+    <script>
+        function drawLine() {
+    const length = document.getElementById('length').value;
+    const line = document.getElementById('line');
+
+    if (!isNaN(length)) {
+        const dotCount = Math.round(Number(length));
+        line.innerHTML = '.'.repeat(dotCount);
+    } else {
+        alert('Napiš délku čáry (číslo): ');
+    }
+}
+    </script>
+</body>
+</head>
+</html>
