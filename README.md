@@ -1,0 +1,2 @@
+# JavaScript
+Domácí úkol: informatika
